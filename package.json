@@ -14,9 +14,12 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@loadable/component": "^5.13.2",
     "gatsby": "^2.24.61",
+    "p5": "^1.1.9",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-p5-wrapper": "^2.3.0"
   },
   "devDependencies": {
     "prettier": "2.1.1"
