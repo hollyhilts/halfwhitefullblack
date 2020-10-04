@@ -1,10 +1,10 @@
 import React from "react"
 import {loadableP5 as P5Wrapper} from './loadable';
-import SketchSnowflakes from './SketchSnowflakes';
+import Museum from '../Museum';
 
 const P5 = () => {
     return(
-      <P5Wrapper sketch={SketchSnowflakes} />
+      <P5Wrapper sketch={Museum} />
     )
 }
 
