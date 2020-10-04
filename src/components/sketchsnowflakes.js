@@ -1,10 +1,12 @@
 const SketchSnowflakes = (p5) => {
 
     let snowflakes = []; // array to hold snowflake objects
+    const avatar = []
 
     p5.setup = () =>  {
       p5.createCanvas(1000, 600);
       p5.noStroke();
+      avatar.push(new user())
     }
 
     p5.draw = () => {
@@ -24,8 +26,8 @@ const SketchSnowflakes = (p5) => {
       }
 
       p5.fill(20);
-      const avatar = new user()
-      avatar.display();
+      avatar[0].update();
+      avatar[0].display();
     }
 
     // snowflake class
@@ -70,6 +72,25 @@ const SketchSnowflakes = (p5) => {
 
       this.display = function () {
         p5.ellipse(this.posX, this.posY, this.size);
+      }
+
+      this.update = function (){
+        if (p5.keyIsDown(p5.LEFT_ARROW)) {
+          console.log(this.posX)
+          this.posX -= 3;
+        }
+        if (p5.keyIsDown(p5.RIGHT_ARROW)) {
+          console.log(this.posX)
+          this.posX += 3;
+        }
+        if (p5.keyIsDown(p5.UP_ARROW)) {
+          console.log(this.posX)
+          this.posY -= 3;
+        }
+        if (p5.keyIsDown(p5.DOWN_ARROW)) {
+          console.log(this.posX)
+          this.posY += 3;
+        }
       }
     }
   }
