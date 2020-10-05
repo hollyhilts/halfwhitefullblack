@@ -1,11 +1,11 @@
 // User character
 export default function Avatar(p5, size) {
-  this.posX = p5.width/2;
-  this.posY = p5.height/2;
+  this.posX = 0;
+  this.posY = 0;
   this.size = size;
 
   this.display = function () {
-    p5.ellipse(this.posX, this.posY, this.size);
+    p5.ellipse(p5.width/2, p5.height/2, this.size);
   }
 
   this.update = function () {
