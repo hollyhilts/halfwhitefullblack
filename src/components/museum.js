@@ -1,14 +1,21 @@
-const Museum = (p5) => {
+import Module from './modules'
+import Avatar from './avatar'
 
-  let snowflakes = []; // array to hold snowflake objects
-  const avatars = []; // for avatar sprites
-  const modules = []; // for module sprites
+const Museum = (p5) => {
+  let snowflakes = [];
+  const avatars = [];
+  const modules = [];
 
   p5.setup = () =>  {
     p5.createCanvas(p5.windowWidth/2, p5.windowHeight/2);
     p5.noStroke();
-    avatars.push(new avatar());
-    modules.push(new module());
+
+    // initialize avatar
+    avatars.push(new Avatar(p5, 10));
+
+    // initalize modules
+    modules.push(new Module(p5, 20, p5.width/2, p5.height/10));
+    modules.push(new Module(p5, 20, p5.width/10, p5.height/2));
   }
 
   p5.draw = () => {
@@ -27,12 +34,20 @@ const Museum = (p5) => {
       flake.display(); // draw snowflake
     }
 
+    // update and redraw avatar and modules
     p5.fill(20);
-    avatars[0].update();
-    avatars[0].display();
+    avatars.forEach(avatar => {
+      avatar.update();
+      avatar.display();
+    })
 
-    modules[0].display();
+    modules.forEach(module => {
+      module.display();
+    })
   }
+
+  // myCustomRedrawAccordingToNewPropsHandler
+  // ^ for handling props - props need to be passed in to './util/p5' too
 
   // snowflake class
   function snowflake() {
@@ -65,44 +80,6 @@ const Museum = (p5) => {
     this.display = function() {
       p5.ellipse(this.posX, this.posY, this.size);
     };
-  }
-
-  // User character
-  function avatar() {
-    // initial
-    this.posX = p5.width/2;
-    this.posY = p5.height/2;
-    this.size = 10;
-
-    this.display = function () {
-      p5.ellipse(this.posX, this.posY, this.size);
-    }
-
-    this.update = function () {
-      if (p5.keyIsDown(p5.LEFT_ARROW)) {
-        this.posX -= 3;
-      }
-      if (p5.keyIsDown(p5.RIGHT_ARROW)) {
-        this.posX += 3;
-      }
-      if (p5.keyIsDown(p5.UP_ARROW)) {
-        this.posY -= 3;
-      }
-      if (p5.keyIsDown(p5.DOWN_ARROW)) {
-        this.posY += 3;
-      }
-    }
-  }
-
-  // Interactive modules, will need to add parameters
-  function module() {
-    this.posX = p5.width/2;
-    this.posY = p5.height/10;
-    this.size = 20;
-
-    this.display = function() {
-      p5.ellipse(this.posX, this.posY, this.size)
-    }
   }
 }
 
