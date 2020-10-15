@@ -33,7 +33,7 @@ const Museum = (p5) => {
   p5.draw = () => {
     p5.background(0);
 
-    // update level
+    // update level (first so that it is in the back of the drawing)
     level.render(avatar.posX, avatar.posY);
 
     // update and redraw avatar and modules
