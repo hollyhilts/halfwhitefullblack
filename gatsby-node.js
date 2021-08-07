@@ -28,3 +28,12 @@ exports.createPages = async ({ graphql, actions }) => {
   console.log(result)
   console.log("######")
 }
+// exports.onCreateWebpackConfig = ({ actions }) => {
+//   actions.setWebpackConfig({
+//     resolve: {
+//       fallback: {
+//         path: require.resolve("path-browserify"),
+//       },
+//     },
+//   })
+// }

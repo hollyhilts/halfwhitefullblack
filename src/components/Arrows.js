@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 const Arrows = ({ paths }) => {
   const arrow = "-->"
-  console.log(paths)
+  // console.log(paths)
   return (
     <div>
       <ul>

@@ -29,7 +29,7 @@ const query = graphql`
   }
 `
 
-const Page1 = () => {
+const Page5 = ({ pageName, pageContext }) => {
   const {
     allContentfulBranch: { nodes: branches },
   } = useStaticQuery(query)
@@ -37,10 +37,10 @@ const Page1 = () => {
     allContentfulPage: { nodes: pages },
   } = useStaticQuery(query)
 
-  const displayPage = pages.find(x => x.order === 1)
+  const displayPage = pages.find(x => x.order === 5)
   // console.log(displayPage);
 
-  const branchList = branches.filter(x => x.page === 1)
+  const branchList = branches.filter(x => x.page === 5)
   const { title, mediaSingle, content } = displayPage
   console.log(branches)
   console.log(branchList)
@@ -52,7 +52,7 @@ const Page1 = () => {
   return (
     <div>
       <h1>{title}</h1>
-      <h4>sound will play on this page</h4>
+      <h4>content will show on this page</h4>
       <div className="content">
         <ReactMarkdown children={cont} />
         <GatsbyImage image={pathToImage} alt={title} />
@@ -75,10 +75,10 @@ const Page1 = () => {
         //   return "";
         // }
       })}
-      {/* {console.log(paths)} */}
+      {console.log(paths)}
       <Arrows paths={paths} />
     </div>
   )
 }
 
-export default Page1
+export default Page5

@@ -1,0 +1,17 @@
+import React from "react"
+import Layout from "../components/Layout"
+import { Link } from "gatsby"
+
+const team = () => {
+  return (
+    <Layout>
+      <main className="team-main">
+        <h1 className="team-title">TEAM PAGE</h1>
+        <Link to="/">back home</Link>
+        <Link to="/page1">start your journey</Link>
+      </main>
+    </Layout>
+  )
+}
+
+export default team
