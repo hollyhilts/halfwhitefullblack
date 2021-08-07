@@ -1,12 +1,17 @@
 import React from "react"
-import P5 from "../components/util/p5";
+import Layout from "../components/Layout"
+import { Link } from "gatsby"
 
 const Index = () => {
-  return(
-    <div>
-      <h1>HalfWhiteFullBlack</h1>
-      <P5/>
-    </div>
+  return (
+    <Layout>
+      <main className="main">
+        <h1 className="main-title">welcome</h1>
+        <Link to="/about">about this project</Link>
+        <Link to="/team">team</Link>
+        <Link to="/page1">begin journey</Link>
+      </main>
+    </Layout>
   )
 }
 

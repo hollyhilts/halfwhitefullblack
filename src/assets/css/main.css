@@ -1,0 +1,52 @@
+@import "arrows.css";
+@import "about.css";
+@import "team.css";
+
+:root {
+  --white: white;
+  --red: #c40808;
+  --orange: #ff6117;
+  --green: #4fb05e;
+  --pink: #eb3b8a;
+  --blue: #1430ba;
+  --brown: brown;
+}
+
+.link-arrow {
+  color: var(--white);
+  text-decoration: none;
+}
+.link-arrow:hover {
+  color: var(--brown);
+}
+.path {
+  color: var(--white);
+  text-decoration: none;
+}
+.path:hover {
+  color: var(--brown);
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.main-title {
+  justify-content: center;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  color: white;
+}
+
+.hidden {
+  height: 0;
+  overflow: hidden;
+}
