@@ -9,5 +9,14 @@ require("dotenv").config({
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        accessToken: process.env.CONTENTFUL_API_KEY,
+        spaceId: "uehe2dn4qmw6",
+      },
+    },
+    "gatsby-plugin-styled-components",
+  ],
 }
