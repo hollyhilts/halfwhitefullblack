@@ -27,7 +27,7 @@ const BranchTemplate = ({ data }) => {
               className="video-file"
               loop
               autoPlay
-              muted
+              unmuted
               playsInline
             ></video>
           ) : mediaSingle.file.contentType === "audio/mpeg" ? (
