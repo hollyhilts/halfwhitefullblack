@@ -50,3 +50,8 @@ ul {
   height: 0;
   overflow: hidden;
 }
+
+.video-file {
+  position: absolute;
+  transform: rotate(90deg);
+}

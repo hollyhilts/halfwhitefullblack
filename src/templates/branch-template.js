@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import ReactMarkdown from "react-markdown"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+// import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import P5 from "../components/util/p5"
 
 const BranchTemplate = ({ data }) => {
@@ -11,14 +11,36 @@ const BranchTemplate = ({ data }) => {
     mediaSingle,
     content: { content },
   } = data.contentfulBranch
-  const pathToImage = getImage(mediaSingle)
+  // const pathToImage = getImage(mediaSingle)
   const imgDescrip = mediaSingle ? mediaSingle.description : null
   const contentMarkdown = `${content}`
   return (
     <div>
       <h1>{title}</h1>
       <div>
-        <GatsbyImage image={pathToImage} className="" alt={title} />
+        {/* <GatsbyImage image={pathToImage} className="" alt={title} /> */}
+        {mediaSingle ? (
+          mediaSingle.file.contentType === "video/mp4" ? (
+            <video
+              width="300"
+              src={mediaSingle.file.url}
+              className="video-file"
+              loop
+              autoPlay
+              muted
+              playsInline
+            ></video>
+          ) : mediaSingle.file.contentType === "audio/mpeg" ? (
+            <audio controls src={mediaSingle.file.url}>
+              Your browser does not support the
+              <code>audio</code> element.
+            </audio>
+          ) : (
+            ""
+          )
+        ) : (
+          ""
+        )}
         {imgDescrip ? <p className="">{imgDescrip}</p> : null}
       </div>
       <div>
@@ -39,6 +61,10 @@ export const query = graphql`
       mediaSingle {
         gatsbyImageData(placeholder: DOMINANT_COLOR)
         description
+        file {
+          url
+          contentType
+        }
       }
       content {
         content

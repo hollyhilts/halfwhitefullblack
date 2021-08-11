@@ -59,7 +59,7 @@ const Page4 = ({ pageName, pageContext }) => {
         {imgDescrip ? <p className="image-description">{imgDescrip}</p> : null}
       </div>
 
-      {branchList.map(branch => {
+      {branchList.forEach(branch => {
         const { page, path } = branch
         paths.push(path)
         if (page === 1) {
