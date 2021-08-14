@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 const team = () => {
   return (
     <Layout>
-      <main className="team-main">
+      <main className="main">
         <h1 className="team-title">TEAM PAGE</h1>
         <Link to="/">back home</Link>
         <Link to="/page1">start your journey</Link>

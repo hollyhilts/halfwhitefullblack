@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 const about = () => {
   return (
     <Layout>
-      <main className="about-main">
+      <main className="main">
         <h1 className="about-title">ABOUT PAGE</h1>
         <Link to="/">back home</Link>
         <Link to="/page1">start your journey</Link>

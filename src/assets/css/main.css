@@ -2,6 +2,8 @@
 @import "about.css";
 @import "team.css";
 
+/* @import url("https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap"); */
+
 :root {
   --white: white;
   --red: #c40808;
@@ -36,9 +38,20 @@
   position: relative;
 }
 
+.branch {
+  height: 100vh;
+  /* display: flex; */
+  /* flex-direction: column; */
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  position: relative;
+}
+
 .main-title {
   justify-content: center;
   color: white;
+  font-family: "Palette Mosaic";
 }
 
 ul {
@@ -53,5 +66,11 @@ ul {
 
 .video-file {
   position: absolute;
+  top: 25vh;
   transform: rotate(90deg);
+}
+
+video {
+  display: block;
+  margin: auto;
 }
