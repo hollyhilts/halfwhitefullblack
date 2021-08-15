@@ -1,8 +1,8 @@
 import React from "react"
-import styled from "styled-components"
+// import styled from "styled-components"
 
-export const Video = ({ src, title, ...props }) => (
-  <IframeVideoWrapper>
+export const Video = ({ src, title, size, ...props }) => (
+  <div className={`video-wrapper ${size}`}>
     <div className="video">
       <iframe
         src={src}
@@ -14,34 +14,34 @@ export const Video = ({ src, title, ...props }) => (
         allowFullScreen
       />
     </div>
-  </IframeVideoWrapper>
+  </div>
 )
 
-const IframeVideoWrapper = styled.div`
-  width: 90vw;
-  max-width: 700px;
-  display: block;
-  margin: auto;
+// const IframeVideoWrapper = styled.div`
+//   width: 90vw;
+//   max-width: 700px;
+//   display: block;
+//   margin: auto;
 
-  .video {
-    overflow: hidden;
-    padding-top: 56.25%;
-    position: relative;
-    /* display: block;
-    margin: auto; */
-  }
+//   .video {
+//     overflow: hidden;
+//     padding-top: 56.25%;
+//     position: relative;
+//     /* display: block;
+//     margin: auto; */
+//   }
 
-  .video iframe {
-    border: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    /* display: block;
-    margin: auto; */
-  }
-`
+//   .video iframe {
+//     border: 0;
+//     height: 100%;
+//     left: 0;
+//     position: absolute;
+//     top: 0;
+//     width: 100%;
+//     /* display: block;
+//     margin: auto; */
+//   }
+// `
 
 Video.defaultProps = {
   src: "https://www.youtube.com/embed/5d4xGNp5Fgs/autoplay=1",
