@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import ReactMarkdown from "react-markdown"
 import Layout from "../components/Layout"
-import { Video } from "../components/Video"
+import { Video } from "../components/video"
 // import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import P5 from "../components/util/p5"
 
