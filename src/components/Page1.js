@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Arrows from "../components/Arrows"
-import Layout from "../components/Layout"
+// import Layout from "../components/Layout"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import "../assets/css/main.css"
 

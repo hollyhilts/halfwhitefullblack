@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Arrows from "../components/Arrows"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import "../assets/css/main.css"
 
 import ReactMarkdown from "react-markdown"
 
@@ -52,7 +53,6 @@ const Page6 = ({ pageName, pageContext }) => {
   return (
     <div>
       <h1>{title}</h1>
-      <h4>content will show on this page</h4>
       <div className="content">
         <ReactMarkdown children={cont} />
         <GatsbyImage image={pathToImage} alt={title} />
