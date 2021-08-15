@@ -1,11 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 
+const id1 = Math.floor(Math.random() * 16)
+const id2 = Math.floor(Math.random() * 16)
+const id3 = Math.floor(Math.random() * 16)
 const Arrows = ({ paths }) => {
   const arrow = "-->"
-  const id1 = Math.floor(Math.random() * 16)
-  const id2 = Math.floor(Math.random() * 16)
-  const id3 = Math.floor(Math.random() * 16)
   // console.log(paths)
   return (
     <div>
