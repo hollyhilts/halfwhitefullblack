@@ -3,16 +3,16 @@ import Layout from "../components/Layout"
 import { Link } from "gatsby"
 import "../assets/css/main.css"
 
-const team = () => {
+const collaborators = () => {
   return (
     <Layout>
       <main className="main">
-        <h1 className="team-title">TEAM PAGE</h1>
-        <Link to="/">back home</Link>
-        <Link to="/page1">start your journey</Link>
+        <h1 className="collaborators-title">collaborators</h1>
+        <Link to="/home">back</Link>
+        <Link to="/page1">the path</Link>
       </main>
     </Layout>
   )
 }
 
-export default team
+export default collaborators

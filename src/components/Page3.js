@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Arrows from "../components/Arrows"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { getImage } from "gatsby-plugin-image"
 import "../assets/css/main.css"
 
 import ReactMarkdown from "react-markdown"
@@ -18,13 +18,19 @@ const query = graphql`
     allContentfulPage {
       nodes {
         title
-        mediaSingle {
-          gatsbyImageData
-        }
         content {
           content
         }
         order
+        pic1 {
+          gatsbyImageData
+        }
+        pic2 {
+          gatsbyImageData
+        }
+        pic3 {
+          gatsbyImageData
+        }
       }
     }
   }
@@ -42,22 +48,23 @@ const Page3 = ({ pageName, pageContext }) => {
   // console.log(displayPage);
 
   const branchList = branches.filter(x => x.page === 3)
-  const { title, mediaSingle, content } = displayPage
-  console.log(branches)
-  console.log(branchList)
+  const { pic1, pic2, pic3, content } = displayPage
 
   const cont = content ? `${content.content}` : ""
-  const pathToImage = getImage(mediaSingle)
-  const imgDescrip = mediaSingle ? mediaSingle.description : null
+
+  let imagePaths = []
+  const pathToImage1 = getImage(pic1)
+  const pathToImage2 = getImage(pic2)
+  const pathToImage3 = getImage(pic3)
+  imagePaths.push(pathToImage1, pathToImage2, pathToImage3)
   let paths = []
   return (
     <div>
-      <h1>{title}</h1>
-      <div className="content">
+      {/* <h1>{title}</h1> */}
+      <h1 className="content">
         <ReactMarkdown children={cont} />
-        <GatsbyImage image={pathToImage} alt={title} />
-        {imgDescrip ? <p className="image-description">{imgDescrip}</p> : null}
-      </div>
+        {/* <GatsbyImage image={pathToImage} alt={title} /> */}
+      </h1>
 
       {branchList.forEach(branch => {
         const { page, path } = branch
@@ -76,7 +83,7 @@ const Page3 = ({ pageName, pageContext }) => {
         // }
       })}
       {console.log(paths)}
-      <Arrows paths={paths} />
+      <Arrows paths={paths} imagePaths={imagePaths} />
     </div>
   )
 }

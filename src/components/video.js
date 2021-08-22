@@ -7,8 +7,11 @@ export const Video = ({ src, title, size, ...props }) => (
       <iframe
         src={src}
         title={title}
-        allow="accelerometer; autoplay *; encrypted-media; gyroscope; picture-in-picture"
+        allow="accelerometer; autoplay; clipboard-write; modestbranding; encrypted-media; gyroscope; picture-in-picture"
         frameBorder="0"
+        rel="0"
+        controls="0"
+        modestbranding="1"
         webkitallowfullscreen="true"
         mozallowfullscreen="true"
         allowFullScreen
@@ -48,11 +51,11 @@ Video.defaultProps = {
   title: "Tester - Tonstartssbandht",
 }
 
-{
-  /* <iframe src="https://player.vimeo.com/video/149487714?h=bb5cb7540b" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-<p><a href="https://vimeo.com/149487714">Transcendental Temporality within David Lynch&#039;s Blue Velvet</a> from <a href="https://vimeo.com/user46157755">Holly Hilts</a> on <a href="https://vimeo.com">Vimeo</a>.</p> */
-}
+// {
+//   /* <iframe src="https://player.vimeo.com/video/149487714?h=bb5cb7540b" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+// <p><a href="https://vimeo.com/149487714">Transcendental Temporality within David Lynch&#039;s Blue Velvet</a> from <a href="https://vimeo.com/user46157755">Holly Hilts</a> on <a href="https://vimeo.com">Vimeo</a>.</p> */
+// }
 
-{
-  /* <iframe width="560" height="315" src="https://www.youtube.com/embed/5d4xGNp5Fgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */
-}
+// {
+//   /* <iframe width="560" height="315" src="https://www.youtube.com/embed/5d4xGNp5Fgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */
+// }

@@ -1,62 +1,21 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import ReactMarkdown from "react-markdown"
 import Layout from "../components/Layout"
 import { Video } from "../components/video"
-// import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import P5 from "../components/util/p5"
 
 const BranchTemplate = ({ data }) => {
-  const {
-    page,
-    title,
-    mediaSingle,
-    vimeo,
-    content: { content },
-  } = data.contentfulBranch
-  // const pathToImage = getImage(mediaSingle)
-  const imgDescrip = mediaSingle ? mediaSingle.description : null
-  const contentMarkdown = `${content}`
+  const { page, title, vimeo } = data.contentfulBranch
+
   return (
     <Layout>
-      <main className="branch">
-        <h1>{title}</h1>
-        {/* <div> */}
-        {/* <GatsbyImage image={pathToImage} className="" alt={title} /> */}
-        {/* {mediaSingle ? (
-            mediaSingle.file.contentType === "video/mp4" ? (
-              <video
-                width="300"
-                src={mediaSingle.file.url}
-                className="video-file"
-                loop
-                autoPlay
-                unmuted
-                playsInline
-              ></video>
-            ) : mediaSingle.file.contentType === "audio/mpeg" ? (
-              <audio controls src={mediaSingle.file.url}>
-                Your browser does not support the
-                <code>audio</code> element.
-              </audio>
-            ) : (
-              ""
-            )
-          ) : (
-            ""
-          )}
-          {imgDescrip ? <p className="">{imgDescrip}</p> : null} */}
-        {/* </div> */}
-        <Video src={vimeo} title={title} />
-        <div>
-          <ReactMarkdown children={contentMarkdown} />
-        </div>
-        {console.log(page)}
-        <Link to={page === 6 ? `/` : `/page${page + 1}`}>
-          go to next chapter
+      <div className="branch">
+        <Video src={vimeo} title={title} size="full-vid" />
+        <Link to={page === 5 ? `/` : `/page${page + 1}`} className="next">
+          next
         </Link>
-        <P5 />
-      </main>
+      </div>
+      <P5 />
     </Layout>
   )
 }

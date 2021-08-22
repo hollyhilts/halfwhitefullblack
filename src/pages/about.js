@@ -7,9 +7,9 @@ const about = () => {
   return (
     <Layout>
       <main className="main">
-        <h1 className="about-title">ABOUT PAGE</h1>
-        <Link to="/">back home</Link>
-        <Link to="/page1">start your journey</Link>
+        <h1 className="about-title">artist's statement</h1>
+        <Link to="/home">back</Link>
+        <Link to="/page1">the path</Link>
       </main>
     </Layout>
   )

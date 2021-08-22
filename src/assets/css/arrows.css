@@ -11,14 +11,14 @@ p {
   right: 50vw;
   top: 15vh;
   font-size: var(--arrow-size);
-  transform: rotate(-90deg);
+  /* transform: rotate(-90deg); */
 }
 #arrow-1 {
   position: absolute;
   right: 10vw;
   top: 10vh;
   font-size: var(--arrow-size);
-  transform: rotate(-30deg);
+  /* transform: rotate(-30deg); */
 }
 #arrow-2 {
   position: absolute;
@@ -26,7 +26,7 @@ p {
   top: 10vh;
   font-size: var(--arrow-size);
 
-  transform: rotate(-140deg);
+  /* transform: rotate(-140deg); */
 }
 #arrow-3 {
   position: absolute;
@@ -34,21 +34,21 @@ p {
   bottom: 10vh;
   font-size: var(--arrow-size);
 
-  transform: rotate(30deg);
+  /* transform: rotate(30deg); */
 }
 #arrow-4 {
   position: absolute;
   left: 10vw;
   bottom: 10vh;
   font-size: var(--arrow-size);
-  transform: rotate(140deg);
+  /* transform: rotate(140deg); */
 }
 #arrow-5 {
   position: absolute;
   right: 30vw;
   top: 5vh;
   font-size: var(--arrow-size);
-  transform: rotate(-60deg);
+  /* transform: rotate(-60deg); */
 }
 #arrow-6 {
   position: absolute;
@@ -56,28 +56,28 @@ p {
   top: 5vh;
   font-size: var(--arrow-size);
 
-  transform: rotate(-140deg);
+  /* transform: rotate(-140deg); */
 }
 #arrow-7 {
   position: absolute;
   right: 30vw;
   bottom: 5vh;
   font-size: var(--arrow-size);
-  transform: rotate(60deg);
+  /* transform: rotate(60deg); */
 }
 #arrow-8 {
   position: absolute;
   left: 30vw;
   bottom: 5vh;
   font-size: var(--arrow-size);
-  transform: rotate(140deg);
+  /* transform: rotate(140deg); */
 }
 #arrow-9 {
   position: absolute;
   right: 45vw;
   top: 7vh;
   font-size: var(--arrow-size);
-  transform: rotate(-80deg);
+  /* transform: rotate(-80deg); */
 }
 #arrow-10 {
   position: absolute;
@@ -85,49 +85,49 @@ p {
   top: 7vh;
   font-size: var(--arrow-size);
 
-  transform: rotate(-120deg);
+  /* transform: rotate(-120deg); */
 }
 #arrow-11 {
   position: absolute;
   right: 45vw;
   bottom: 7vh;
   font-size: var(--arrow-size);
-  transform: rotate(80deg);
+  /* transform: rotate(80deg); */
 }
 #arrow-12 {
   position: absolute;
   left: 45vw;
   bottom: 7vh;
   font-size: var(--arrow-size);
-  transform: rotate(120deg);
+  /* transform: rotate(120deg); */
 }
 #arrow-13 {
   position: absolute;
   right: 20vw;
   top: 20vh;
   font-size: var(--arrow-size);
-  transform: rotate(-50deg);
+  /* transform: rotate(-50deg); */
 }
 #arrow-14 {
   position: absolute;
   left: 20vw;
   top: 20vh;
   font-size: var(--arrow-size);
-  transform: rotate(-120deg);
+  /* transform: rotate(-120deg); */
 }
 #arrow-15 {
   position: absolute;
   right: 20vw;
   bottom: 20vh;
   font-size: var(--arrow-size);
-  transform: rotate(50deg);
+  /* transform: rotate(50deg); */
 }
 #arrow-16 {
   position: absolute;
   left: 20vw;
   bottom: 20vh;
   font-size: var(--arrow-size);
-  transform: rotate(120deg);
+  /* transform: rotate(120deg); */
 }
 /* #arrow-17 {
   position: absolute;

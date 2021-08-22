@@ -22,7 +22,10 @@ module.exports = {
           `PT Sans Narrow`,
           `Bebas Neue`,
           `Alegreya Sans SC`,
-          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+          `Nanum Gothic`,
+          `Gruppo`,
+          `ZCOOL QingKe HuangYou`,
+          `Staatliches`,
         ],
         display: "swap",
       },
