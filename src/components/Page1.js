@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Arrows from "../components/Arrows"
+import Form from "../components/Form"
 // import { getImage } from "gatsby-plugin-image"
 
 // import Layout from "../components/Layout"
@@ -32,6 +33,13 @@ const query = graphql`
     }
   }
 `
+let status = "off"
+
+function handleSubmit(e) {
+  e.preventDefault()
+  status = "on"
+  // console.log("You clicked submit.")
+}
 
 const Page1 = () => {
   const {
@@ -70,7 +78,14 @@ const Page1 = () => {
         </div> */}
       </div>
 
-      {/* <form action=""></form> */}
+      {/* <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          // value={this.state.value}
+          // onChange={this.handleChange}
+        />
+        <button type="submit">Submit</button>
+      </form> */}
 
       {branchList.forEach(branch => {
         const { page, path } = branch
@@ -89,7 +104,12 @@ const Page1 = () => {
         // }
       })}
       {/* {console.log(paths)} */}
-      <Arrows paths={paths} imagePaths={imagePaths} />
+      <Form paths={paths} imagePaths={imagePaths} />
+      {/* {status === "off" ? (
+        <div></div>
+      ) : (
+        <Arrows paths={paths} imagePaths={imagePaths} />
+      )} */}
     </div>
   )
 }

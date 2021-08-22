@@ -1,6 +1,7 @@
 @import "arrows.css";
 @import "about.css";
 @import "team.css";
+@import "collabs.css";
 
 /* @import url("https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap"); */
 
@@ -12,10 +13,40 @@
   --pink: #eb3b8a;
   --blue: #1430ba;
   --brown: brown;
+  --title-font: "Staatliches";
+  --paragraph-font: "ZCOOL QingKe HuangYou";
+  --detail-font: "ZCOOL QingKe HuangYou";
+  --backup-font: "Nanum Gothic";
+  --button-font: "Staatliches";
+  /* `Limelight`,
+          `Palette Mosaic`,
+          `PT Sans Narrow`,
+          `Bebas Neue`,
+          `Alegreya Sans SC`,
+          `Nanum Gothic`,
+          `Gruppo`,
+          `ZCOOL QingKe HuangYou`,
+          `Staatliches`, */
 }
 
+body {
+  margin: 0;
+}
 .page {
-  height: 100%;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Staatliches";
+  color: white;
+  margin: 40px;
+}
+
+h2 {
+  font-family: "Staatliches";
+  color: var(--brown);
+  font-size: 40px;
+  margin: 40px;
 }
 
 .container {
@@ -37,16 +68,8 @@
   color: var(--brown);
 }
 
-.link {
-  color: var(--white);
-  text-decoration: none;
-}
-.link:hover {
-  color: var(--brown);
-}
-
 .main {
-  height: 90vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,8 +77,61 @@
   position: relative;
 }
 
+.main-collab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.welcome-content {
+  font-family: var(--paragraph-font);
+  width: 50vw;
+  /* text-align: left; */
+  /* justify-content: center; */
+  margin: 18px auto;
+  color: white;
+  /* display: inline-block; */
+}
+
+/* .welcome-text {
+} */
+
+.home-content {
+  font-family: var(--paragraph-font);
+  width: 50vw;
+  /* text-align: left; */
+  /* justify-content: center; */
+  margin: 18px auto;
+  margin-bottom: 50px;
+  color: white;
+  font-size: 20px;
+}
+.statement-content {
+  font-family: var(--paragraph-font);
+  width: 60vw;
+  /* text-align: left; */
+  /* justify-content: center; */
+  margin: 18px auto;
+  margin-bottom: 50px;
+  color: white;
+  font-size: 20px;
+}
+
+.contents {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .branch {
   text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-title {
@@ -120,17 +196,50 @@ ul {
   width: 80vw;
   text-align: left;
   margin: auto;
-  /* font-family:  */
+  font-family: var(--paragraph-font);
+  font-size: 20px;
+  color: var(--white);
+}
+.link {
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--button-font);
+  border: 1px solid var(--white);
+  border-radius: 8px;
+  padding: 8px;
+  margin: 20px;
+}
+.link:hover {
+  color: var(--brown);
+  border: 1px solid var(--brown);
+}
+.next {
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--button-font);
+  border: 1px solid var(--white);
+  border-radius: 8px;
+  padding: 8px;
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
-.next {
-  /* position: absolute; */
-  height: 8px;
-  /* bottom: 2%; */
-  /* right: 2%; */
+.next:hover {
+  color: var(--brown);
+  border: 1px solid var(--brown);
 }
 
 .image-button {
   width: 100px;
   border-radius: 50%;
+}
+
+.off {
+  height: 0;
+  overflow: hidden;
+}
+
+.arrow-list li {
+  font-family: var(--detail-font);
 }

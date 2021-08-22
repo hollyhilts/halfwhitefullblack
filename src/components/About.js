@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown"
 
 const query = graphql`
   {
-    allContentfulHome {
+    allContentfulStatement {
       nodes {
         title
         content {
@@ -16,26 +16,23 @@ const query = graphql`
   }
 `
 
-const Home = () => {
+const Statement = () => {
   const {
-    allContentfulHome: { nodes: home },
+    allContentfulStatement: { nodes: statement },
   } = useStaticQuery(query)
 
-  const { title, content } = home[0]
+  const { title, content } = statement[0]
   const cont = content ? `${content.content}` : ""
 
   return (
     <div className="contents">
       <h1>{title}</h1>
-      <div className="home-content">
+      <div className="statement-content">
         <ReactMarkdown children={cont} />
       </div>
       <div className="links">
-        <Link to="/about" className="link">
-          statement
-        </Link>
-        <Link to="/collaborators" className="link">
-          collaborators
+        <Link to="/home" className="link">
+          back
         </Link>
         <Link to="/page1" className="link">
           the path
@@ -45,4 +42,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Statement

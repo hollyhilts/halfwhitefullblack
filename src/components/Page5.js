@@ -51,9 +51,9 @@ const Page5 = () => {
   let paths = []
   return (
     <div>
-      <h1 className="content">
+      <h2 className="content">
         <ReactMarkdown children={cont} />
-      </h1>
+      </h2>
 
       {branchList.forEach(branch => {
         const { page, path } = branch

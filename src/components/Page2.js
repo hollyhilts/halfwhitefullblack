@@ -56,7 +56,7 @@ const Page2 = ({ pageName, pageContext }) => {
   return (
     <div>
       {/* <h1>{title}</h1> */}
-      <div className="content">
+      <div className="markdown-content">
         <ReactMarkdown children={cont} />
         {/* <GatsbyImage image={pathToImage} alt={title} />
         {imgDescrip ? <p className="image-description">{imgDescrip}</p> : null} */}

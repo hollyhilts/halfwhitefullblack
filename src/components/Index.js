@@ -31,8 +31,8 @@ const Index = () => {
     <div>
       <h1>{title}</h1>
       <Video src={link} title={title} size="half-video" />
-      <div className="content">
-        <ReactMarkdown children={cont} />
+      <div className="welcome-content">
+        <ReactMarkdown children={cont} className="welcome-text" />
       </div>
       <Link className="link" to="/home">
         come in

@@ -8,55 +8,60 @@ while (ids.length < 3) {
   if (ids.indexOf(r) === -1) ids.push(r)
 }
 console.log(ids)
-const Arrows = ({ paths, imagePaths }) => {
+const Arrows = ({ paths, imagePaths, status }) => {
   let type = ""
   let images = []
   if (typeof imagePaths[0] === "object") {
     type = "img"
     images = imagePaths
   }
-  return (
-    <div>
-      <ul>
-        <li id={`arrow-${ids[0]}`}>
-          <Link to={`/${paths[0]}`} className="link-arrow">
-            {type === "img" ? (
-              <GatsbyImage
-                image={images[0]}
-                className="image-button"
-              ></GatsbyImage>
-            ) : (
-              <p>{imagePaths[0]}</p>
-            )}
-          </Link>
-        </li>
-        <li id={`arrow-${ids[1]}`}>
-          <Link to={`/${paths[1]}`} className="link-arrow">
-            {type === "img" ? (
-              <GatsbyImage
-                image={images[1]}
-                className="image-button"
-              ></GatsbyImage>
-            ) : (
-              <p>{imagePaths[1]}</p>
-            )}
-          </Link>
-        </li>
-        <li id={`arrow-${ids[2]}`}>
-          <Link to={`/${paths[2]}`} className="link-arrow">
-            {type === "img" ? (
-              <GatsbyImage
-                image={images[2]}
-                className="image-button"
-              ></GatsbyImage>
-            ) : (
-              <p>{imagePaths[2]}</p>
-            )}
-          </Link>
-        </li>
-      </ul>
-    </div>
-  )
+  console.log(status)
+  if (status === "off") {
+    return <div></div>
+  } else {
+    return (
+      <div>
+        <ul className="arrow-list">
+          <li id={`arrow-${ids[0]}`}>
+            <Link to={`/${paths[0]}`} className="link-arrow">
+              {type === "img" ? (
+                <GatsbyImage
+                  image={images[0]}
+                  className="image-button"
+                ></GatsbyImage>
+              ) : (
+                <p>{imagePaths[0]}</p>
+              )}
+            </Link>
+          </li>
+          <li id={`arrow-${ids[1]}`}>
+            <Link to={`/${paths[1]}`} className="link-arrow">
+              {type === "img" ? (
+                <GatsbyImage
+                  image={images[1]}
+                  className="image-button"
+                ></GatsbyImage>
+              ) : (
+                <p>{imagePaths[1]}</p>
+              )}
+            </Link>
+          </li>
+          <li id={`arrow-${ids[2]}`}>
+            <Link to={`/${paths[2]}`} className="link-arrow">
+              {type === "img" ? (
+                <GatsbyImage
+                  image={images[2]}
+                  className="image-button"
+                ></GatsbyImage>
+              ) : (
+                <p>{imagePaths[2]}</p>
+              )}
+            </Link>
+          </li>
+        </ul>
+      </div>
+    )
+  }
 }
 
 export default Arrows

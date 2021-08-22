@@ -13,6 +13,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-mdx`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
