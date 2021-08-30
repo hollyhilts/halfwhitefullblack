@@ -74,8 +74,8 @@ strong {
 .react-audio-player {
   position: absolute;
   z-index: 10;
-  left: 4%;
-  bottom: 0.5%;
+  left: 6%;
+  bottom: 2%;
 }
 
 .container {

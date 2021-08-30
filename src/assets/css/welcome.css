@@ -1,18 +1,4 @@
 .welcome-content {
-  font-family: var(--title-font);
-  width: 24vw;
-  text-align: left;
-  /* justify-content: center; */
-  margin: 18px auto;
-  /* color: white; */
-  position: absolute;
-  top: 6%;
-  left: 7%;
-  color: var(--brown);
-  /* display: inline-block; */
-}
-
-.welcome-content {
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
@@ -30,19 +16,6 @@
 }
 
 .welcome-content2 {
-  font-family: var(--title-font);
-  width: 24vw;
-  text-align: left;
-  /* justify-content: center; */
-  margin: 18px auto;
-  /* color: white; */
-  position: absolute;
-  bottom: 10%;
-  right: 5%;
-  color: var(--brown);
-  /* display: inline-block; */
-}
-.welcome-content2 {
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
@@ -59,21 +32,6 @@
   }
 }
 
-.welcome-vid {
-  /* position: fixed; */
-  top: 10;
-  width: 80vw;
-  margin-bottom: 16px;
-}
-
-.welcome-link {
-  color: var(--white);
-  text-decoration: none;
-  font-family: var(--button-font);
-  border: 1px solid var(--white);
-  border-radius: 8px;
-  padding: 8px;
-}
 .welcome-link {
   opacity: 1;
   animation-name: fadeInOpacity;
@@ -93,4 +51,186 @@
 .welcome-link:hover {
   color: var(--brown);
   border: 1px solid var(--brown);
+}
+
+/* Cellphone media query */
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .welcome-content {
+    font-family: var(--title-font);
+    font-size: 10px;
+    width: 80vw;
+    text-align: left;
+    /* justify-content: center; */
+    /* margin: 18px auto; */
+    /* color: white; */
+    position: absolute;
+    top: 2%;
+    left: 7%;
+    color: var(--brown);
+    /* display: inline-block; */
+  }
+  .welcome-content2 {
+    font-family: var(--title-font);
+    font-size: 10px;
+    width: 90vw;
+    text-align: right;
+    /* justify-content: center; */
+    margin: 18px auto;
+    /* color: white; */
+    position: absolute;
+    bottom: 10%;
+    right: 7%;
+    color: var(--brown);
+    /* display: inline-block; */
+  }
+  .welcome-vid {
+    /* position: fixed; */
+    top: 10;
+    width: 80vw;
+    margin-bottom: 16px;
+  }
+
+  .welcome-link {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--button-font);
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    padding: 8px;
+  }
+}
+
+/* Portrait iPad media query */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .welcome-content {
+    font-family: var(--title-font);
+    width: 24vw;
+    text-align: left;
+    /* justify-content: center; */
+    margin: 18px auto;
+    /* color: white; */
+    position: absolute;
+    top: 6%;
+    left: 7%;
+    color: var(--brown);
+    /* display: inline-block; */
+  }
+  .welcome-content2 {
+    font-family: var(--title-font);
+    width: 24vw;
+    text-align: left;
+    /* justify-content: center; */
+    margin: 18px auto;
+    /* color: white; */
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    color: var(--brown);
+    /* display: inline-block; */
+  }
+  .welcome-vid {
+    /* position: fixed; */
+    top: 10;
+    width: 80vw;
+    margin-bottom: 16px;
+  }
+
+  .welcome-link {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--button-font);
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    padding: 8px;
+  }
+}
+
+/* Landscape iPad media query */
+@media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+  .welcome-content {
+    font-family: var(--title-font);
+    width: 24vw;
+    text-align: left;
+    /* justify-content: center; */
+    margin: 18px auto;
+    /* color: white; */
+    position: absolute;
+    top: 14%;
+    left: 7%;
+    color: var(--brown);
+    /* display: inline-block; */
+  }
+  .welcome-content2 {
+    font-family: var(--title-font);
+    width: 24vw;
+    text-align: left;
+    /* justify-content: center; */
+    margin: 18px auto;
+    /* color: white; */
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+    color: var(--brown);
+    /* display: inline-block; */
+  }
+  .welcome-vid {
+    /* position: fixed; */
+    top: 10;
+    width: 80vw;
+    margin-bottom: 16px;
+  }
+
+  .welcome-link {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--button-font);
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    padding: 8px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024.1px) and (-webkit-min-device-pixel-ratio: 1) {
+  .welcome-content {
+    font-family: var(--title-font);
+    width: 24vw;
+    text-align: left;
+    /* justify-content: center; */
+    margin: 18px auto;
+    /* color: white; */
+    position: absolute;
+    top: 6%;
+    left: 7%;
+    color: var(--brown);
+    /* display: inline-block; */
+  }
+  .welcome-content2 {
+    font-family: var(--title-font);
+    width: 24vw;
+    text-align: left;
+    /* justify-content: center; */
+    margin: 18px auto;
+    /* color: white; */
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    color: var(--brown);
+    /* display: inline-block; */
+  }
+  .welcome-vid {
+    /* position: fixed; */
+    top: 10;
+    width: 80vw;
+    margin-bottom: 16px;
+  }
+
+  .welcome-link {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--button-font);
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    padding: 8px;
+  }
 }
