@@ -1,0 +1,46 @@
+.video-file {
+  position: absolute;
+  top: 25%;
+  transform: rotate(90deg);
+}
+/* video { */
+/* display: block; */
+/* margin: auto; */
+/* } */
+
+.video-wrapper {
+  margin: auto;
+}
+
+.video {
+  /* overflow: hidden; */
+  padding-top: 56.25%;
+  position: relative;
+  margin-bottom: 16px;
+  /* display: block;
+    margin: auto; */
+}
+
+.video iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  /* top: 50vh; */
+  /* transform: translate(0, -50%); */
+  /* display: block;
+    margin: auto; */
+}
+
+.full-video {
+  width: 95%;
+}
+
+.full-vid {
+  width: 90%;
+}
+.half-video {
+  width: 50%;
+}

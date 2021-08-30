@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Arrows from "../components/Arrows"
+// import Arrows from "../components/Arrows"
 import Form from "../components/Form"
 // import { getImage } from "gatsby-plugin-image"
 
@@ -9,6 +9,7 @@ import Form from "../components/Form"
 import "../assets/css/main.css"
 
 import ReactMarkdown from "react-markdown"
+import "markdown-it"
 
 const query = graphql`
   {
@@ -33,13 +34,13 @@ const query = graphql`
     }
   }
 `
-let status = "off"
+// let subStatus = false
 
-function handleSubmit(e) {
-  e.preventDefault()
-  status = "on"
-  // console.log("You clicked submit.")
-}
+// function handleSubmit(e) {
+//   e.preventDefault()
+//   subStatus = !subStatus
+//   // console.log("You clicked submit.")
+// }
 
 const Page1 = () => {
   const {

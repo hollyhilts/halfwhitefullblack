@@ -21,8 +21,8 @@ p {
 }
 #collab-1 {
   position: absolute;
-  right: 16vw;
-  top: 40vh;
+  right: 17vw;
+  top: 41vh;
   font-size: var(--collab-size);
   /* transform: rotate(-30deg); */
 }
@@ -37,7 +37,7 @@ p {
 #collab-3 {
   position: absolute;
   right: 14vw;
-  top: 22vh;
+  top: 24vh;
   font-size: var(--collab-size);
 
   /* transform: rotate(30deg); */
@@ -71,17 +71,28 @@ p {
   font-size: var(--collab-size);
   /* transform: rotate(60deg); */
 }
+.collab-bubble:hover {
+  z-index: 10;
+}
+
+.collab-bubble p {
+  font-family: "Gruppo";
+}
+.collab-bubble {
+  padding: 8px;
+}
 
 /* Cellphone media query */
 @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
   .collab-bubble {
-    width: 100px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     overflow: hidden;
   }
   .collab-bubble:hover {
     color: var(--brown);
-    height: 300px;
+    height: 230px;
+    width: 200px;
     background: var(--white);
     overflow: visible;
     border-radius: 16px;
@@ -94,8 +105,8 @@ p {
   }
 }
 
-/* Landscape iPad media query */
-@media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+/* Portrait iPad media query */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .collab-bubble {
     width: 200px;
     height: 130px;
@@ -104,6 +115,51 @@ p {
   .collab-bubble:hover {
     color: var(--brown);
     height: 300px;
+    background: var(--white);
+    overflow: visible;
+    border-radius: 16px;
+  }
+  .collab-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Landscape iPad media query */
+@media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+  .collab-bubble {
+    padding: 8px;
+    width: 200px;
+    height: 130px;
+    overflow: hidden;
+  }
+  .collab-bubble:hover {
+    color: var(--brown);
+    width: 300px;
+    height: 240px;
+    background: var(--white);
+    overflow: visible;
+    border-radius: 16px;
+  }
+  .collab-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024.1px) and (-webkit-min-device-pixel-ratio: 1) {
+  .collab-bubble {
+    padding: 8px;
+    width: 300px;
+    height: 130px;
+    overflow: hidden;
+  }
+  .collab-bubble:hover {
+    color: var(--brown);
+    height: 250px;
     background: var(--white);
     overflow: visible;
     border-radius: 16px;

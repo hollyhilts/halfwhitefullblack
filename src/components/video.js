@@ -5,6 +5,7 @@ export const Video = ({ src, title, size, ...props }) => (
   <div className={`video-wrapper ${size}`}>
     <div className="video">
       <iframe
+        options="autoplay; loop"
         src={`${src}?controls=0&autoplay=1&controls=0&fs=0`}
         title={title}
         allow="accelerometer; autoplay; clipboard-write; modestbranding; encrypted-media; gyroscope; picture-in-picture"

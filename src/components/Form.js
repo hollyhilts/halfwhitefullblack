@@ -16,7 +16,7 @@ const Form = ({ paths, imagePaths }) => {
     alert("Thank you, please click an arrow to move forward")
     // event.preventDefault()
   }
-  let status = "off"
+  let subStatus = false
 
   return (
     <form onSubmit={handleSubmit}>
@@ -29,7 +29,7 @@ const Form = ({ paths, imagePaths }) => {
         type="submit"
         value="Submit"
         onClick={() => {
-          status = "on"
+          subStatus = !subStatus
         }}
       />
       <div id="arrows">

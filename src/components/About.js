@@ -25,7 +25,7 @@ const Statement = () => {
   const cont = content ? `${content.content}` : ""
 
   return (
-    <div className="contents">
+    <div className="statement-contents">
       <h1>{title}</h1>
       <div className="statement-content">
         <ReactMarkdown children={cont} />

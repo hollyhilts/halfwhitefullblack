@@ -4,6 +4,9 @@ import Arrows from "../components/Arrows"
 import "../assets/css/main.css"
 
 import ReactMarkdown from "react-markdown"
+import ReactAudioPlayer from "react-audio-player"
+
+import ring from "../assets/ring.mp3"
 
 const query = graphql`
   {
@@ -53,7 +56,7 @@ const Page4 = () => {
       <h2 className="content">
         <ReactMarkdown children={cont} />
       </h2>
-
+      <ReactAudioPlayer src={ring} autoPlay />
       {branchList.forEach(branch => {
         const { page, path } = branch
         paths.push(path)
