@@ -37,7 +37,12 @@ const Index = () => {
 
   return (
     <div>
-      <ReactAudioPlayer src={welcomeAud} autoPlay controls />
+      <ReactAudioPlayer
+        src={welcomeAud}
+        autoPlay
+        controls
+        className="welcomeaudio"
+      />
       <div className="video-wrapper full-video">
         <video
           src={welcomeVid}

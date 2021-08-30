@@ -56,7 +56,7 @@ const Page4 = () => {
       <h2 className="content">
         <ReactMarkdown children={cont} />
       </h2>
-      <ReactAudioPlayer src={ring} autoPlay />
+      <ReactAudioPlayer src={ring} autoPlay controls className="page4audio" />
       {branchList.forEach(branch => {
         const { page, path } = branch
         paths.push(path)
