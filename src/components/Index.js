@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import "../assets/css/main.css"
-// import { Video } from "../components/video"
+import { Video } from "../components/video"
 
 import ReactMarkdown from "react-markdown"
 import ReactAudioPlayer from "react-audio-player"
@@ -31,7 +31,7 @@ const Index = () => {
     allContentfulWelcome: { nodes: welcome },
   } = useStaticQuery(query)
 
-  const { content, content2, video } = welcome[0]
+  const { content, content2, video, title, link } = welcome[0]
   const cont = content ? `${content.content}` : ""
   const cont2 = content2 ? `${content2.content2}` : ""
 
@@ -39,7 +39,7 @@ const Index = () => {
     <div>
       <ReactAudioPlayer
         src={welcomeAud}
-        autoPlay
+        autoplay
         controls
         className="welcomeaudio"
       />
@@ -53,10 +53,11 @@ const Index = () => {
         ></video>
       </div>
       {/* <Video
-        src={welcomeVid}
+        src={link}
         title={title}
         size="full-video"
         className="welcome-vid"
+        volume="0"
       /> */}
       <div className="welcome-content">
         <ReactMarkdown children={cont} className="welcome-text" />

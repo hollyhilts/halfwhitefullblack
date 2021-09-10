@@ -51,7 +51,6 @@ const Page1 = () => {
   } = useStaticQuery(query)
 
   const displayPage = pages.find(x => x.order === 1)
-  // console.log(displayPage);
   let imagePaths = []
   const branchList = branches.filter(x => x.page === 1)
   const { arrows, arrow2, arrow3, content } = displayPage

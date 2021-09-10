@@ -1,7 +1,7 @@
 import React from "react"
 // import styled from "styled-components"
 
-export const Video = ({ src, title, size, ...props }) => (
+export const Video = ({ src, title, size, volume, ...props }) => (
   <div className={`video-wrapper ${size}`}>
     <div className="video">
       <iframe
@@ -13,6 +13,7 @@ export const Video = ({ src, title, size, ...props }) => (
         autoplay="1"
         rel="0"
         controls="0"
+        volume={volume}
         // modestbranding="1"
         webkitallowfullscreen="true"
         mozallowfullscreen="true"

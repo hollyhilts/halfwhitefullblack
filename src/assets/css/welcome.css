@@ -98,9 +98,6 @@
     border-radius: 8px;
     padding: 8px;
   }
-  .full-video {
-    width: 90%;
-  }
 }
 
 /* Portrait iPad media query */
@@ -145,9 +142,6 @@
     border: 1px solid var(--white);
     border-radius: 8px;
     padding: 8px;
-  }
-  .full-video {
-    width: 90%;
   }
 }
 
@@ -194,9 +188,6 @@
     border-radius: 8px;
     padding: 8px;
   }
-  .full-video {
-    width: 90%;
-  }
 }
 
 /* Desktop */
@@ -241,8 +232,5 @@
     border: 1px solid var(--white);
     border-radius: 8px;
     padding: 8px;
-  }
-  .full-video {
-    width: 90%;
   }
 }
