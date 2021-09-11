@@ -78,6 +78,10 @@ p {
 .collab-bubble p {
   font-family: "Gruppo";
 }
+
+.collab-bubble h5 {
+  margin: 6px auto 2px;
+}
 .collab-bubble {
   padding: 8px;
 }
@@ -86,8 +90,11 @@ p {
 @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
   .collab-bubble {
     width: 75px;
-    height: 75px;
+    height: 80px;
     overflow: hidden;
+  }
+  .collab-title {
+    font-size: 0.5rem;
   }
   .collab-bubble:hover {
     color: var(--brown);

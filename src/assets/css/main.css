@@ -116,6 +116,15 @@ strong {
   text-align: center;
   position: relative;
 }
+.main-1 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-top: 2em;
+  text-align: center;
+  position: relative;
+}
 
 .main-collab {
   display: flex;
@@ -186,7 +195,20 @@ ul {
   color: var(--white);
 }
 
-.markdown-content em {
+.markdown-page1-content {
+  width: 80vw;
+  text-align: left;
+  margin: auto;
+  font-family: var(--paragraph-font);
+  font-size: 20px;
+  color: var(--white);
+}
+
+/* .page1 {
+  margin-top: 10rem;
+} */
+
+.markdown-page1-content em {
   /* .statement-content em { */
   text-decoration: line-through;
   color: var(--brown);

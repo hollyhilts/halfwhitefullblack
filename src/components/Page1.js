@@ -64,10 +64,10 @@ const Page1 = () => {
   // const imgDescrip = mediaSingle ? mediaSingle.description : null
   let paths = []
   return (
-    <div>
+    <div className="page1">
       {/* <h1>{title}</h1> */}
       <div className="content">
-        <div className="markdown-content">
+        <div className="markdown-page1-content">
           <ReactMarkdown children={cont} />
         </div>
         {/* <div className="image-content">

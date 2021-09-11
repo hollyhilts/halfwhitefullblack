@@ -51,12 +51,25 @@ const Page4 = () => {
 
   const cont = content ? `${content.content}` : ""
   let paths = []
+  const snd = new Audio(ring)
+
+  const playSound = () => {
+    snd.play()
+  }
+
+  // setTimeout(function () {
+  //   snd.play() // play it through JavaScript after 3 seconds
+  // }, 3000)
+
   return (
     <div>
+      {/* {snd.play()} */}
       <h2 className="content">
         <ReactMarkdown children={cont} />
       </h2>
-      <ReactAudioPlayer src={ring} autoPlay controls className="page4audio" />
+      <audio id="sound1" src={ring} preload="auto"></audio>
+      <button onClick={playSound}>play</button>
+      {/* <ReactAudioPlayer src={ring} autoPlay className="page4audio" /> */}
       {branchList.forEach(branch => {
         const { page, path } = branch
         paths.push(path)

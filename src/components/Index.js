@@ -6,7 +6,7 @@ import { Video } from "../components/video"
 import ReactMarkdown from "react-markdown"
 import ReactAudioPlayer from "react-audio-player"
 
-import welcomeVid from "../assets/welcomeVid2.mp4"
+// import welcomeVid from "../assets/welcomeVid2.mp4"
 import welcomeAud from "../assets/welcoming-sound.wav"
 
 const query = graphql`
@@ -37,13 +37,13 @@ const Index = () => {
 
   return (
     <div>
-      <ReactAudioPlayer
+      {/* <ReactAudioPlayer
         src={welcomeAud}
         autoplay
         controls
         className="welcomeaudio"
-      />
-      <div className="video-wrapper full-video">
+      /> */}
+      {/* <div className="video-wrapper full-video">
         <video
           src={welcomeVid}
           className="full-video welcome-vid"
@@ -51,14 +51,14 @@ const Index = () => {
           loop
           controls
         ></video>
-      </div>
-      {/* <Video
+      </div> */}
+      <Video
         src={link}
         title={title}
         size="full-video"
         className="welcome-vid"
         volume="0"
-      /> */}
+      />
       <div className="welcome-content">
         <ReactMarkdown children={cont} className="welcome-text" />
       </div>

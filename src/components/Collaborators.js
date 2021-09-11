@@ -47,7 +47,7 @@ const Collaborators = () => {
                 className="collab-image"
               />
               <h5>{name}</h5>
-              <p>{title}</p>
+              <p className="collab-title">{title}</p>
               <ReactMarkdown children={aboutInfo} />
             </li>
           )
