@@ -4,6 +4,7 @@
 @import "collabs.css";
 @import "welcome.css";
 @import "video.css";
+@import "page1.css";
 
 /* @import url("https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap"); */
 
@@ -126,7 +127,7 @@ strong {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  /* justify-content: left; */
   margin-top: 2em;
   text-align: center;
   position: relative;

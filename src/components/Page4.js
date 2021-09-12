@@ -4,7 +4,6 @@ import Arrows from "../components/Arrows"
 import "../assets/css/main.css"
 
 import ReactMarkdown from "react-markdown"
-// import ReactAudioPlayer from "react-audio-player"
 
 import ring from "../assets/ring.mp3"
 
@@ -58,24 +57,17 @@ const Page4 = () => {
     // only run once on the first render on the client
   }, [])
 
-  // const snd = Audio.new(ring)
   const playSound = () => {
     audio.play()
   }
 
-  // setTimeout(function () {
-  //   snd.play() // play it through JavaScript after 3 seconds
-  // }, 3000)
-
   return (
     <div>
-      {/* {snd.play()} */}
       <h2 className="content">
         <ReactMarkdown children={cont} />
       </h2>
       <audio id="sound1" src={ring} preload="auto"></audio>
       <button onClick={playSound}>play</button>
-      {/* <ReactAudioPlayer src={ring} autoPlay className="page4audio" /> */}
       {branchList.forEach(branch => {
         const { page, path } = branch
         paths.push(path)

@@ -1,0 +1,27 @@
+/* Cellphone media query */
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
+  .main-1 {
+    justify-content: left;
+  }
+}
+
+/* Portrait iPad media query */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .main-1 {
+    justify-content: center;
+  }
+}
+
+/* Landscape iPad media query */
+@media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+  .main-1 {
+    justify-content: center;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024.1px) and (-webkit-min-device-pixel-ratio: 1) {
+  .main-1 {
+    justify-content: center;
+  }
+}

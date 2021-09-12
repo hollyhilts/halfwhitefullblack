@@ -1,11 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-// import Arrows from "../components/Arrows"
 import Form from "../components/Form"
-// import { getImage } from "gatsby-plugin-image"
 
-// import Layout from "../components/Layout"
-// import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import "../assets/css/main.css"
 
 import ReactMarkdown from "react-markdown"
@@ -56,26 +52,15 @@ const Page1 = () => {
   const { arrows, arrow2, arrow3, content } = displayPage
 
   imagePaths.push(arrows, arrow2, arrow3)
-  console.log(branches)
-  console.log(branchList)
 
   const cont = content ? `${content.content}` : ""
-  // const pathToImage = getImage(mediaSingle)
-  // const imgDescrip = mediaSingle ? mediaSingle.description : null
   let paths = []
   return (
     <div className="page1">
-      {/* <h1>{title}</h1> */}
       <div className="content">
         <div className="markdown-page1-content">
           <ReactMarkdown children={cont} />
         </div>
-        {/* <div className="image-content">
-          <GatsbyImage image={pathToImage} alt={title} />
-          {imgDescrip ? (
-            <p className="image-description">{imgDescrip}</p>
-          ) : null}
-        </div> */}
       </div>
 
       {/* <form onSubmit={handleSubmit}>
@@ -103,7 +88,6 @@ const Page1 = () => {
         //   return "";
         // }
       })}
-      {/* {console.log(paths)} */}
       <Form paths={paths} imagePaths={imagePaths} />
       {/* {status === "off" ? (
         <div></div>
