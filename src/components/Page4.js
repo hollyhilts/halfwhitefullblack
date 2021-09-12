@@ -1,10 +1,10 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Arrows from "../components/Arrows"
 import "../assets/css/main.css"
 
 import ReactMarkdown from "react-markdown"
-import ReactAudioPlayer from "react-audio-player"
+// import ReactAudioPlayer from "react-audio-player"
 
 import ring from "../assets/ring.mp3"
 
@@ -51,10 +51,16 @@ const Page4 = () => {
 
   const cont = content ? `${content.content}` : ""
   let paths = []
-  const snd = new Audio(ring)
 
+  const [audio, setAudio] = useState(null)
+  useEffect(() => {
+    setAudio(new Audio(ring))
+    // only run once on the first render on the client
+  }, [])
+
+  // const snd = Audio.new(ring)
   const playSound = () => {
-    snd.play()
+    audio.play()
   }
 
   // setTimeout(function () {

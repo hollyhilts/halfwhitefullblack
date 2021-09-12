@@ -4,10 +4,10 @@ import "../assets/css/main.css"
 import { Video } from "../components/video"
 
 import ReactMarkdown from "react-markdown"
-import ReactAudioPlayer from "react-audio-player"
+// import ReactAudioPlayer from "react-audio-player"
 
 // import welcomeVid from "../assets/welcomeVid2.mp4"
-import welcomeAud from "../assets/welcoming-sound.wav"
+// import welcomeAud from "../assets/welcoming-sound.wav"
 
 const query = graphql`
   {
@@ -31,7 +31,7 @@ const Index = () => {
     allContentfulWelcome: { nodes: welcome },
   } = useStaticQuery(query)
 
-  const { content, content2, video, title, link } = welcome[0]
+  const { content, content2, title, link } = welcome[0]
   const cont = content ? `${content.content}` : ""
   const cont2 = content2 ? `${content2.content2}` : ""
 
