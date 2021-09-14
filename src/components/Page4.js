@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Arrows from "../components/Arrows"
 import "../assets/css/main.css"
+import ReactAudioPlayer from "react-audio-player"
 
 import ReactMarkdown from "react-markdown"
 
@@ -61,13 +62,25 @@ const Page4 = () => {
     audio.play()
   }
 
+  const audioStyle = {
+    width: "115px",
+    height: "25px",
+  }
+
   return (
     <div>
       <h2 className="content">
         <ReactMarkdown children={cont} />
       </h2>
-      <audio id="sound1" src={ring} preload="auto"></audio>
-      <button onClick={playSound}>play</button>
+      {/* <audio id="sound1" src={ring} preload="auto"></audio> */}
+      <ReactAudioPlayer
+        src={ring}
+        autoPlay
+        controls
+        style={audioStyle}
+        className="page4audio"
+      />
+      {/* <button onClick={playSound}>play</button> */}
       {branchList.forEach(branch => {
         const { page, path } = branch
         paths.push(path)
