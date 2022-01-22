@@ -36,7 +36,7 @@ const Index = () => {
   const cont2 = content2 ? `${content2.content2}` : ""
 
   return (
-    <div>
+    <div className="index-contents">
       {/* <ReactAudioPlayer
         src={welcomeAud}
         autoplay
@@ -52,13 +52,17 @@ const Index = () => {
           controls
         ></video>
       </div> */}
+      <div className="welcome-video-content">
+
       <Video
         src={link}
         title={title}
-        size="full-video"
-        className="welcome-vid"
-        volume="0"
+        // size="full-video"
+        // autoPlay="1"
+        // className="welcome-vid"
+        // volume="0"
       />
+      </div>
       <div className="welcome-content">
         <ReactMarkdown children={cont} className="welcome-text" />
       </div>

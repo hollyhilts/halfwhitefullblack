@@ -1,4 +1,4 @@
-import { div } from "prelude-ls"
+// import { div } from "prelude-ls"
 import React from "react"
 import Arrows from "../components/Arrows"
 
