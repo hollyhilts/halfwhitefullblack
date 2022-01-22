@@ -88,6 +88,11 @@ strong {
   left: 0;
 }
 
+.index-contents {
+  text-align: center;
+  height: 100%;
+}
+
 .welcomeaudio {
   position: absolute;
   z-index: 10;

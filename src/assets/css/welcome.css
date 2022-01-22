@@ -1,3 +1,11 @@
+
+
+.welcome-video-content {
+  height: 90%;
+  width: 90%;
+  margin: auto;
+}
+
 .welcome-content {
   opacity: 1;
   animation-name: fadeInOpacity;
@@ -65,7 +73,7 @@
     /* color: white; */
     position: absolute;
     top: 2%;
-    left: 7%;
+    left: 5%;
     color: var(--brown);
     /* display: inline-block; */
   }
@@ -79,14 +87,14 @@
     /* color: white; */
     position: absolute;
     bottom: 10%;
-    right: 7%;
+    right: 3%;
     color: var(--brown);
     /* display: inline-block; */
   }
   .welcome-vid {
-    /* position: fixed; */
+    position: fixed;
     top: 10;
-    width: 80vw;
+    height: 70vh;
     margin-bottom: 16px;
   }
 
@@ -111,7 +119,7 @@
     /* color: white; */
     position: absolute;
     top: 6%;
-    left: 7%;
+    left: 5%;
     color: var(--brown);
     /* display: inline-block; */
   }
@@ -124,14 +132,14 @@
     /* color: white; */
     position: absolute;
     bottom: 10%;
-    right: 5%;
+    right: 3%;
     color: var(--brown);
     /* display: inline-block; */
   }
   .welcome-vid {
-    /* position: fixed; */
+    position: fixed;
     top: 10;
-    width: 80vw;
+    height: 70vh;
     margin-bottom: 16px;
   }
 
@@ -156,7 +164,7 @@
     /* color: white; */
     position: absolute;
     top: 14%;
-    left: 7%;
+    left: 5%;
     color: var(--brown);
     /* display: inline-block; */
   }
@@ -169,14 +177,14 @@
     /* color: white; */
     position: absolute;
     bottom: 20%;
-    right: 5%;
+    right: 3%;
     color: var(--brown);
     /* display: inline-block; */
   }
   .welcome-vid {
-    /* position: fixed; */
+    position: fixed;
     top: 10;
-    width: 80vw;
+    height: 70vh;
     margin-bottom: 16px;
   }
 
@@ -201,7 +209,7 @@
     /* color: white; */
     position: absolute;
     top: 6%;
-    left: 7%;
+    left: 5%;
     color: var(--brown);
     /* display: inline-block; */
   }
@@ -214,14 +222,14 @@
     /* color: white; */
     position: absolute;
     bottom: 10%;
-    right: 5%;
+    right: 3%;
     color: var(--brown);
     /* display: inline-block; */
   }
   .welcome-vid {
-    /* position: fixed; */
+    position: fixed;
     top: 10;
-    width: 80vw;
+    height: 70vh;
     margin-bottom: 16px;
   }
 
