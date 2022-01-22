@@ -52,22 +52,23 @@ const Index = () => {
           controls
         ></video>
       </div> */}
+      <div className="welcome-content-container">
       <div className="welcome-video-content">
-
-      <Video
-        src={link}
-        title={title}
-        // size="full-video"
-        // autoPlay="1"
-        // className="welcome-vid"
-        // volume="0"
-      />
+        <Video
+          src={link}
+          title={title}
+          // size="full-video"
+          // autoPlay="1"
+          // className="welcome-vid"
+          // volume="0"
+        />
       </div>
       <div className="welcome-content">
         <ReactMarkdown children={cont} className="welcome-text" />
       </div>
       <div className="welcome-content2">
         <ReactMarkdown children={cont2} className="welcome-text" />
+      </div>
       </div>
       <Link className="welcome-link" to="/home">
         come in
